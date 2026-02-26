@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Project Management Building Design</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+body{background:#f4f7fa;color:#333}
+header{position:fixed;width:100%;top:0;left:0;background:#0f172a;color:#fff;padding:20px 60px;display:flex;justify-content:space-between;align-items:center;z-index:1000;transition:0.4s}
+header.scrolled{background:#020617;padding:15px 60px}
+header h1{font-size:22px;font-weight:600}
+nav a{color:#fff;text-decoration:none;margin-left:25px;font-size:14px;transition:0.3s}
+nav a:hover{color:#38bdf8}
+.hero{height:100vh;background:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;position:relative}
+.hero::after{content:'';position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.6);top:0;left:0}
+.hero-content{position:relative;z-index:1;max-width:800px;animation:fadeIn 2s ease}
+.hero-content h2{font-size:48px;margin-bottom:20px}
+.hero-content p{font-size:18px;margin-bottom:30px}
+.btn{display:inline-block;padding:12px 30px;background:#38bdf8;color:#fff;text-decoration:none;border-radius:30px;transition:0.4s}
+.btn:hover{background:#0ea5e9}
+section{padding:100px 60px}
+.section-title{text-align:center;margin-bottom:60px}
+.section-title h2{font-size:32px;color:#0f172a}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about img{width:100%;border-radius:15px;transition:0.5s}
+.about img:hover{transform:scale(1.05)}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}
+.card{background:#fff;padding:30px;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,0.05);transition:0.4s}
+.card:hover{transform:translateY(-10px)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.gallery img{width:100%;border-radius:10px;transition:0.5s}
+.gallery img:hover{transform:scale(1.08)}
+.timeline{position:relative;max-width:900px;margin:auto}
+.timeline::after{content:'';position:absolute;width:6px;background:#38bdf8;top:0;bottom:0;left:50%;margin-left:-3px}
+.container{padding:20px 40px;position:relative;background:inherit;width:50%}
+.container.left{left:0}
+.container.right{left:50%}
+.container::after{content:'';position:absolute;width:20px;height:20px;right:-10px;background:#fff;border:4px solid #38bdf8;top:15px;border-radius:50%;z-index:1}
+.right::after{left:-10px}
+.content{padding:20px;background:#fff;border-radius:10px;box-shadow:0 5px 20px rgba(0,0,0,0.05)}
+.contact{background:#0f172a;color:#fff;text-align:center}
+.contact form{max-width:600px;margin:auto;display:grid;gap:20px}
+.contact input,.contact textarea{padding:12px;border:none;border-radius:8px}
+.contact button{padding:12px;background:#38bdf8;border:none;color:#fff;border-radius:25px;cursor:pointer;transition:0.4s}
+.contact button:hover{background:#0ea5e9}
+footer{background:#020617;color:#94a3b8;text-align:center;padding:20px}
+@keyframes fadeIn{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:900px){.about{grid-template-columns:1fr}.timeline::after{left:31px}.container{width:100%;padding-left:70px;padding-right:25px}.container.right{left:0}.container::after{left:15px}}
+</style>
+</head>
+<body>
+<header id="header">
+<h1>BuildMaster PM</h1>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#projects">Projects</a>
+<a href="#timeline">Timeline</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+<section class="hero" id="home">
+<div class="hero-content">
+<h2>Modern Building Project Management</h2>
+<p>Delivering excellence in construction planning, execution, and sustainable building design with innovation and precision.</p>
+<a href="#contact" class="btn">Start Your Project</a>
+</div>
+</section>
+<section id="about">
+<div class="section-title"><h2>About Our Company</h2></div>
+<div class="about">
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab">
+<div>
+<h3>Professional Construction Management</h3>
+<p>We specialize in modern infrastructure development, ensuring high-quality delivery from planning to completion. Our team integrates innovative design, safety standards, and cutting-edge technology.</p>
+<p>Our portfolio includes commercial buildings, residential complexes, smart offices, and sustainable structures designed for future growth.</p>
+</div>
+</div>
+</section>
+<section id="services">
+<div class="section-title"><h2>Our Services</h2></div>
+<div class="services">
+<div class="card"><h3>Project Planning</h3><p>Strategic scheduling and budgeting for maximum efficiency.</p></div>
+<div class="card"><h3>Architecture Design</h3><p>Modern and sustainable architectural solutions.</p></div>
+<div class="card"><h3>Construction Supervision</h3><p>On-site management ensuring quality and safety compliance.</p></div>
+<div class="card"><h3>Risk Management</h3><p>Identifying and mitigating project risks effectively.</p></div>
+</div>
+</section>
+<section id="projects">
+<div class="section-title"><h2>Featured Projects</h2></div>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29">
+<img src="https://images.unsplash.com/photo-1494526585095-c41746248156">
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+<img src="https://images.unsplash.com/photo-1479839672679-a46483c0e7c8">
+</div>
+</section>
+<section id="timeline">
+<div class="section-title"><h2>Project Timeline</h2></div>
+<div class="timeline">
+<div class="container left"><div class="content"><h3>Planning Phase</h3><p>Concept development and feasibility study.</p></div></div>
+<div class="container right"><div class="content"><h3>Design Phase</h3><p>Architectural and structural blueprint creation.</p></div></div>
+<div class="container left"><div class="content"><h3>Construction Phase</h3><p>Execution and supervision of the project.</p></div></div>
+<div class="container right"><div class="content"><h3>Completion Phase</h3><p>Final inspection and project delivery.</p></div></div>
+</div>
+</section>
+<section class="contact" id="contact">
+<div class="section-title"><h2>Contact Us</h2></div>
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="5" placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+</section>
+<footer>
+<p>© 2026 BuildMaster Project Management. All Rights Reserved.</p>
+</footer>
+<script>
+window.addEventListener('scroll',function(){
+const header=document.getElementById('header');
+header.classList.toggle('scrolled',window.scrollY>50);
+});
+</script>
+</body>
+</html>
